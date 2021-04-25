@@ -78,7 +78,10 @@ const QuizCategories = () => {
         {currentQuizStep === "start" ? (
           <>
             <Typography variant="h1" className={classes.mainTitle}>
-              Hey, let's start:
+              Hey, welcome!
+            </Typography>
+            <Typography variant="h1" className={classes.answer}>
+              This quiz is hard, can you reach the highest score?
             </Typography>
             <form onSubmit={handleSubmit}>
               <Button
@@ -87,7 +90,7 @@ const QuizCategories = () => {
                 variant="contained"
                 color="primary"
               >
-                Submit
+                Start
               </Button>
             </form>
           </>

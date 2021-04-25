@@ -84,13 +84,16 @@ const QuizAnswers = ({
   return !processedAnswers || !processedAnswers.length ? (
     <>
       <Typography variant="h1" className={classes.mainTitle}>
-        Answer flowing Questions:
+        Answer the flowing Questions:
       </Typography>
       <form onSubmit={handleResult}>
         <Grid container spacing={4}>
           <Grid item xs={12}>
             {quizData.map((quiz) => (
               <Paper key={quiz.question} className={classes.paper}>
+                <Typography variant="h5" className={classes.mainTitle}>
+                  <span dangerouslySetInnerHTML={createMarkup(quiz.category)} />
+                </Typography>
                 <Typography variant="h5" className={classes.question}>
                   <span dangerouslySetInnerHTML={createMarkup(quiz.question)} />
                 </Typography>
@@ -114,16 +117,27 @@ const QuizAnswers = ({
                     ))}
                   </Select>
                 </FormControl>
+                
               </Paper>
             ))}
-            <Button
-              className={classes.submitButton}
-              variant="contained"
-              color="primary"
-              type="submit"
-            >
-              Result
-            </Button>
+            <Grid item xs={6}>
+              <Button
+                className={classes.submitButton}
+                variant="contained"
+                color="primary"
+                type="submit"
+              >
+                Result
+              </Button>
+              <Button
+                className={classes.submitButton}
+                onClick={resetQuiz}
+                variant="contained"
+                color="primary"
+              >
+                Reset
+              </Button>
+            </Grid>
           </Grid>
         </Grid>
       </form>
