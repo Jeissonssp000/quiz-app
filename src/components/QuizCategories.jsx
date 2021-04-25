@@ -81,7 +81,7 @@ const QuizCategories = () => {
               Hey, welcome!
             </Typography>
             <Typography variant="h1" className={classes.answer}>
-              This quiz is hard, can you reach the highest score?
+              This is a hard quiz, can you reach the highest score?
             </Typography>
             <form onSubmit={handleSubmit}>
               <Button

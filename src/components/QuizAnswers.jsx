@@ -120,27 +120,32 @@ const QuizAnswers = ({
                 
               </Paper>
             ))}
-            <Grid item xs={6}>
-              <Button
-                className={classes.submitButton}
-                variant="contained"
-                color="primary"
-                type="submit"
-              >
-                Result
-              </Button>
-              <Button
-                className={classes.submitButton}
-                onClick={resetQuiz}
-                variant="contained"
-                color="primary"
-              >
-                Reset
-              </Button>
+            <Grid container spacing={6}>
+              <Grid item xs={9}>
+                <Button
+                  className={classes.submitButton}
+                  variant="contained"
+                  color="primary"
+                  type="submit"
+                >
+                  Result
+                </Button>
+              </Grid>
+              <Grid item xs={2} justify="flex-end">
+                <Button
+                  className={classes.submitButton}
+                  onClick={resetQuiz}
+                  variant="contained"
+                  color="primary"
+                >
+                  Reset
+                </Button>
+              </Grid>
             </Grid>
           </Grid>
         </Grid>
       </form>
+      
     </>
   ) : (
     <TotalResults

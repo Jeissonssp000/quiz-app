@@ -18,8 +18,7 @@ const TotalResults = ({
         Results
       </Typography>
       <Typography variant="h4">
-        {processedAnswers.filter(({ isCorrect }) => isCorrect).length} out of{" "}
-        {processedAnswers.length}
+        {processedAnswers.filter(({ isCorrect }) => isCorrect).length} out of{" "} {processedAnswers.length}
       </Typography>
       <Button
         onClick={(e) => {
